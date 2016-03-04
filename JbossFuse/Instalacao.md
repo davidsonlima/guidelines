@@ -10,6 +10,10 @@ URL: xxxx
 tar xvzf ...
 ```
 
+####Iniciando o Jboss Fuse####
+
+```./bin/fuse```
+
 ####Instalando como serviço####
 
 Adicione a feature wrapper e utilize o seguinte comando:
