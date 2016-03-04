@@ -4,13 +4,13 @@ Utilizamos a versão 6.2
 
 URL: xxxx
 
-###Procedimentos###
+####Procedimentos####
 
 ```
 tar xvzf ...
 ```
 
-###Instalando como serviço###
+####Instalando como serviço####
 
 Adicione a feature wrapper e utilize o seguinte comando:
 
