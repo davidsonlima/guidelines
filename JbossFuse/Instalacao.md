@@ -27,7 +27,7 @@ Primeiro é necessário criar uma fábrica:
 
 Depois precisamos criar um container child:
 
-```container-create root child```
+```container-create-child root child```
 
 Startando o container:
 
