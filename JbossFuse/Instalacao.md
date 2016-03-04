@@ -45,3 +45,8 @@ wrapper:install -d jbossfuse -n jbossfuse
 ```
 
 Será exibido na tela os comandos para ativar o serviço na máquina.
+
+
+####Acessando o Hawtio####
+
+Para acessar o hawtio basta acessar http://localhost:8181
