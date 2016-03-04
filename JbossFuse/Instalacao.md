@@ -16,17 +16,6 @@ tar xvzf ...
 ./bin/fuse
 ```
 
-####Instalando como serviço####
-
-Adicione a feature wrapper e utilize o seguinte comando:
-
-```
-wrapper:install -d jbossfuse -n jbossfuse
-```
-
-Será exibido na tela os comandos para ativar o serviço na máquina.
-
-
 ####Comandos iniciais####
 
 Primeiro é necessário criar uma fábrica:
@@ -46,3 +35,13 @@ Startando o container:
 ```
 container-connect child
 ```
+
+####Instalando como serviço####
+
+Adicione a feature wrapper e utilize o seguinte comando:
+
+```
+wrapper:install -d jbossfuse -n jbossfuse
+```
+
+Será exibido na tela os comandos para ativar o serviço na máquina.
