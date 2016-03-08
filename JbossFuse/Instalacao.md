@@ -1,6 +1,6 @@
 ###Instalação###
 
-Utilizamos a versão 6.2
+Utilizamos a versão 6.2.0
 
 URL: xxxx
 
