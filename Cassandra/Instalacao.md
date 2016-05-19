@@ -2,8 +2,10 @@
 
 #### Instalando via MSTAX
 
-`~/mstax/install.sh
-source ~/.bashrc`
+```
+~/mstax/install.sh
+source ~/.bashrc
+```
 
 ### Startando o Cassandra
 
