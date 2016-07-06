@@ -7,9 +7,10 @@
 * Services
 * Events
 * Subscriptions
+* Thing Shapes
 * Thing Templates
-* Data Shapes
 * Things
+* Data Shapes
 * Mashups
 * ThingWorx Organization
 * Application Keys
@@ -27,14 +28,11 @@ Properties are the attributes (i.e. speed, location, firmware version, temperatu
   - The Thing’s current conditions  
   - Static or dynamic aspects  
   - Example: Serial No. (static), Current Temperature (dynamic)  
-
 * Defined at Thing, ThingTemplate, or ThingShape level
   - Properties are inherited from implemented ThingTemplates and ThingShapes
-
 * Each property has a name, description, and base type.
   - Depending on the base type, a property may contain different kinds of information
   - Example: a base type InfoTable can hold a table of values described by a DataShape
-
 
 ## Services
 
@@ -74,7 +72,7 @@ Events are actions or occurrences that can be recognised and might be handled by
 
 ### Subscriptions
 
-* Links an Entity to an Event
+* Links an Entity to an Event. `Subscriptions` are `Services` triggerd by `Events` 
 * Receives data from the Event
   - When the Event is fired, the source of the Event sends the Event data to the subscriber
 * Performs a Subscription code when the Event triggers
@@ -86,6 +84,19 @@ Subscription to a built-in Property (DataChange or Alert)
     - Subscription to a User-defined Event of an Entity
   - When the Event is triggered, perform the Subscription’s script implementation with the data sent from the Event
     - An Entity can subscribe to its own Event, or to that of another Entity
+
+### Thing Shape 
+
+Base definition component. Top of inheritance structure. Should have unique behaviours. From the perspective of OO programming, a Thing Shape can be seen as an `Abstract Class`. Example: `Vehicule` and `Refigerated Machine`
+
+### Thing Template
+
+Used to model a set of similar objects. Can implement multiple Thing Shapes and one Thing Template. From the perspective of OO programming, a Thing Shape can be seen as a `Class`. Example: `Car`, `Truck`, `Normal Truck`, `Refrigerated Truck` and `Refigerated Machine`
+
+### Thing
+
+A specific instance of an object or system. Can implement one Thing Template and multiple Thing Shapes. From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2` 
+
 
 ## Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
