@@ -28,15 +28,64 @@ Properties are the attributes (i.e. speed, location, firmware version, temperatu
   - Static or dynamic aspects  
   - Example: Serial No. (static), Current Temperature (dynamic)  
 
-* Defined at Thing, ThingTemplate, or ThingShape level  
+* Defined at Thing, ThingTemplate, or ThingShape level
   - Properties are inherited from implemented ThingTemplates and ThingShapes
 
-* Each property has a name, description, and base type.  
+* Each property has a name, description, and base type.
   - Depending on the base type, a property may contain different kinds of information
   - Example: a base type InfoTable can hold a table of values described by a DataShape
 
 
+## Services
 
+Services can be viewed as methods of a class using the analogy with OO Programming.
+
+* Services are functions that an Entity can perform
+* Can be defined at Thing, ThingTemplate or ThingShape level
+  - Such as properties are inherited from implemented ThingTemplates and ThingShapes
+* Two aspects:
+  - Service Definition
+    - Name
+    - Input and output parameters – not required, but usually there is one or both
+    - Individual runtime permissions, if applicable
+  - Service Implementation
+    - What the Service actually does
+    - Methods (Handler): JavaScript, SQL Query, SQL Command
+    - Script Handler is a powerful way to use the server’s data, Things, and services for your application
+    - Can perform calculations, lookups, and call/access properties or services from other Things and/or even access to external databases
+* Can be invoked through URL, REST client capable application, or by another Service within ThingWorx
+
+## Events
+
+Events are actions or occurrences that can be recognised and might be handled by some subscriber to the specific action or occurrence.
+
+* When triggered, sends information about a Thing
+* Built-in Event:
+  - Attached to an Entity’s specific property
+  - Can be triggered when property value changes (DataChange) or hits a certain value (Alert).
+  - An alert is just a particular kind of event
+* User-defined Event
+  - Attached to an Entity
+  - User must define a name and the DataShape that describes the data being sent upon Event trigger
+  - Does not have pre-defined trigger
+  - Event must be fired, usually from within a Service
+* To use an Event, it must have a Subscriber
+  - An Event can have multiple Subscriptions
+
+### Subscriptions
+
+* Links an Entity to an Event
+* Receives data from the Event
+  - When the Event is fired, the source of the Event sends the Event data to the subscriber
+* Performs a Subscription code when the Event triggers
+  - Can use the Event’s data as an input
+  - Uses the same technique as the creation of a Service with Script Handler
+* Subscribe to built-in or User-defined Event
+Subscription to a built-in Property (DataChange or Alert)
+  - When a Property value changes, perform the Subscription’s script implementation
+    - Subscription to a User-defined Event of an Entity
+  - When the Event is triggered, perform the Subscription’s script implementation with the data sent from the Event
+    - An Entity can subscribe to its own Event, or to that of another Entity
 
 ## Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
