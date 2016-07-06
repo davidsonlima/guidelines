@@ -1,7 +1,7 @@
 # ThingWorx Certification Wiki  
 
-(Exam Coverage 12%)
-## Define the following key ThingWorx concepts: 
+
+## Define the following key concepts: (Exam Coverage 12%) 
 
 * Properties
 * Services
@@ -21,10 +21,24 @@
 
 ### Properties
 
+Properties are the attributes (i.e. speed, location, firmware version, temperature, etc) of an specific entity (Thing, ThingTemplate or ThingShape). It is the same as attributes of a class in Object Oriented Programming.  
+
+* How you describe the data directly related to a Thing
+  - The Thing’s current conditions  
+  - Static or dynamic aspects  
+  - Example: Serial No. (static), Current Temperature (dynamic)  
+
+* Defined at Thing, ThingTemplate, or ThingShape level  
+  - Properties are inherited from implemented ThingTemplates and ThingShapes
+
+* Each property has a name, description, and base type.  
+  - Depending on the base type, a property may contain different kinds of information
+  - Example: a base type InfoTable can hold a table of values described by a DataShape
 
 
-(Exam Coverage 5%)
-## Identify the following: 
+
+
+## Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
 * ThingWorx extensions
 
