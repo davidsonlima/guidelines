@@ -68,7 +68,7 @@ jdbc:mysql://127.0.0.1:3306/thingworxtrainingsample?allowMultiQueries=true
 SELECT * FROM SampleTable
 ```
 
-## Aula 03 - Alertas
+## Aula 03 - Alerts
 
 #### Configuração de Email (Para recebimento de alertas)
 ```
