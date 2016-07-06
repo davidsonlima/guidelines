@@ -1,4 +1,4 @@
-Aula 01
+## Aula 01
 
 ```
 https://support.ptc.com/appserver/cs/view/solution.jsp?n=CS192961&lang=en&source=snippet
@@ -9,16 +9,14 @@ vm-password - stand1
 tomcat - admin/admin
 twx: Administrator/admin
 twx: ThingWorkStudent/ptc
-```
 
-*ferrario.adam@gmail.com*
+email: ferrario.adam@gmail.com
 
 http://marketplace.thingworx.com/
 
-Widgets
-http://support.ptc.com/cs/help/thingworx_hc/thingworx_6.0_hc/index.jspx?id=thingworx09&action=show
+Widgets: http://support.ptc.com/cs/help/thingworx_hc/thingworx_6.0_hc/index.jspx?id=thingworx09&action=show
  
-![Rss](http://apps.shareholder.com/rss/rss.aspx?channels=8626&companyid=PMTC&sh_auth=1327966735%2E0%2E0%2E42543%2Ee821bd4beb119dcffdb56e31a34f3e64)
+Rss: http://apps.shareholder.com/rss/rss.aspx?channels=8626&companyid=PMTC&sh_auth=1327966735%2E0%2E0%2E42543%2Ee821bd4beb119dcffdb56e31a34f3e64
 
 https://precisionlms.ptc.com/viewer/guide/en/23464865/page/23593454#23593457
 
@@ -26,11 +24,11 @@ https://precisionlms.ptc.com/viewer/guide/en/23464865/page/23593454#23593457
 https://support.ptc.com/appserver/cs/portal/
 
 http://support.ptc.com/appserver/ptcu/class_eval_list.jsp?
+```
 
+## Aula 02 - Link Data in Marshup + Truck Challenge
 
-Aula 02 - Link Data in Marshup + Truck Challenge
-
-GetThinkWorxFeed  Code
+#### GetThinkWorxFeed  Code
 
 ```javascript
 var params = {
@@ -69,16 +67,14 @@ for each(var item in xmlPage.channel.item){
     result.AddRow(newEntry);
 }
 ```
-
 ```
 jdbc:mysql://127.0.0.1:3306/thingworxtrainingsample?allowMultiQueries=true
 SELECT * FROM SampleTable
 ```
 
+## Aula 03 - Alertas
 
-Aula 03 - Alertas
-
-Mail Configuration
+#### Mail Configuration
 ```
 server: smtp.gmail.com
 port: 465
@@ -86,13 +82,12 @@ pop3: pop.gmail.com/995
 useSSL: yes
 email: aftwtraining@gmail.com/ thingworx
 http://www.google.com/accounts/DisplayUnlockCaptcha
-
-Users[me.FieldServiceTech].smsAddress
-
 ```
 
 ####################################################
 ```javascript
+Users[me.FieldServiceTech].smsAddress
+
 //Set booleans and tags for high/low temperature/humidity
 var tag = {}; 
 if (me.CurrentHumidity < me.VMHumidityLowLimit) {
@@ -188,7 +183,7 @@ me.CurrentInventory = Inventory;
 ###############################################
 ```
 
-Aula 04 -  Events & Subscription
+## Aula 04 -  Events & Subscription
 
 ```javascript
 ####################################################
@@ -265,9 +260,9 @@ if (me.VMHumidityHigh) {
 }
 ```
 
-####################################################
+## Aula 5 - Organizations and Dashboards
 
-Configuração AD:
+#### Exemplo configuração AD:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -326,5 +321,3 @@ Configuração AD:
 	</DirectoryServices>
 </Entities>
 ```
-
-Aula 05 - Dashbords
