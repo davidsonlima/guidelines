@@ -4,14 +4,10 @@
 
 * Add the following lines to improve performance:
 
-`-XX:+UseNUMA
-
--XX:+UseConcMarkSweepGC
-
--XX:PermSize=128m
-
--XX:MaxPermSize=1024m (or more)
-`
+ `-XX:+UseNUMA`  
+ `-XX:+UseConcMarkSweepGC`  
+ `-XX:PermSize=128m`   
+ `-XX:MaxPermSize=1024m (or more)`
 
 * Clear the other memory settings.
 
