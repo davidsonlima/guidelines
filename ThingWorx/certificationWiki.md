@@ -1,7 +1,7 @@
 # ThingWorx Certification Wiki  
 
 
-## Define the following key concepts: (Exam Coverage 12%) 
+### Define the following key concepts: (Exam Coverage 12%) 
 
 * Properties
 * Services
@@ -20,7 +20,7 @@
 * Virtual Thing
 * Info Tables  
 
-### Properties
+#### Properties
 
 Properties are the attributes (i.e. speed, location, firmware version, temperature, etc) of an specific entity (Thing, ThingTemplate or ThingShape). It is the same as attributes of a class in Object Oriented Programming.  
 
@@ -34,7 +34,7 @@ Properties are the attributes (i.e. speed, location, firmware version, temperatu
   - Depending on the base type, a property may contain different kinds of information
   - Example: a base type InfoTable can hold a table of values described by a DataShape
 
-## Services
+#### Services
 
 Services can be viewed as methods of a class using the analogy with OO Programming.
 
