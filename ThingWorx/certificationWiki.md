@@ -1,7 +1,7 @@
 # ThingWorx Certification Wiki  
 
 
-### Define the following key concepts: (Exam Coverage 12%) 
+#### Define the following key concepts: (Exam Coverage 12%) 
 
 * Properties
 * Services
@@ -20,7 +20,7 @@
 * Virtual Thing
 * Info Tables  
 
-#### Properties
+##### Properties
 
 Properties are the attributes (i.e. speed, location, firmware version, temperature, etc) of an specific entity (Thing, ThingTemplate or ThingShape). It is the same as attributes of a class in Object Oriented Programming.  
 
@@ -34,7 +34,7 @@ Properties are the attributes (i.e. speed, location, firmware version, temperatu
   - Depending on the base type, a property may contain different kinds of information
   - Example: a base type InfoTable can hold a table of values described by a DataShape
 
-#### Services
+##### Services
 
 Services can be viewed as methods of a class using the analogy with OO Programming.
 
@@ -53,7 +53,7 @@ Services can be viewed as methods of a class using the analogy with OO Programmi
     - Can perform calculations, lookups, and call/access properties or services from other Things and/or even access to external databases
 * Can be invoked through URL, REST client capable application, or by another Service within ThingWorx
 
-## Events
+##### Events
 
 Events are actions or occurrences that can be recognised and might be handled by some subscriber to the specific action or occurrence.
 
@@ -70,7 +70,7 @@ Events are actions or occurrences that can be recognised and might be handled by
 * To use an Event, it must have a Subscriber
   - An Event can have multiple Subscriptions
 
-### Subscriptions
+##### Subscriptions
 
 * Links an Entity to an Event. `Subscriptions` are `Services` triggerd by `Events` 
 * Receives data from the Event
@@ -85,36 +85,35 @@ Subscription to a built-in Property (DataChange or Alert)
   - When the Event is triggered, perform the Subscription’s script implementation with the data sent from the Event
     - An Entity can subscribe to its own Event, or to that of another Entity
 
-### Thing Shape 
+##### Thing Shape 
 
 Base definition component. Top of inheritance structure. Should have unique behaviours. From the perspective of OO programming, a Thing Shape can be seen as an `Abstract Class`. Example: `Vehicule` and `Refigerated Machine`
 
-### Thing Template
+##### Thing Template
 
 Used to model a set of similar objects. Can implement multiple Thing Shapes and one Thing Template. From the perspective of OO programming, a Thing Shape can be seen as a `Class`. Example: `Car`, `Truck`, `Normal Truck`, `Refrigerated Truck` and `Refigerated Machine`
 
-### Thing
+##### Thing
 
 A specific instance of an object or system. Can implement one Thing Template and multiple Thing Shapes. From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2` 
 
 
-## Identify the following: (Exam Coverage 5%)
+#### Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
 * ThingWorx extensions
 
-### ThingWorx connectivity technologies
+##### ThingWorx connectivity technologies
 
-### ThingWorx extensions
+##### ThingWorx extensions
  
   Located on the Market Place (http://marketplace.thingworx.com/).
   Thingworx developpers can download existing ones and create and publish their owns as well.
   Extensions might contain custom widgets (JavaScript, HTML, CSS) for the mashup builder and/or Java classes for develop server-side capabilities.  
 
-Navigate the ThingWorx Composer User Interface (Exam Coverage 5%)
+#### Navigate the ThingWorx Composer User Interface (Exam Coverage 5%)
 
-Create Thing Templates (Exam Coverage 2%)	
+#### Create Thing Templates (Exam Coverage 2%)	
 * Use predefined Things such as Timer Thing*
-
 *se Thing Templates to create Things (Exam Coverage: 3%)
 
 Work with ThingWorx entities and data by doing the following: (Exam Coverage 7%)
