@@ -1,5 +1,6 @@
-Day 01
+Aula 01
 
+```
 https://support.ptc.com/appserver/cs/view/solution.jsp?n=CS192961&lang=en&source=snippet
 r@d1Xc0rp16_02
 https://precisionlms.ptc.com
@@ -8,16 +9,16 @@ vm-password - stand1
 tomcat - admin/admin
 twx: Administrator/admin
 twx: ThingWorkStudent/ptc
+```
 
-ferrario.adam@gmail.com
+*ferrario.adam@gmail.com*
 
 http://marketplace.thingworx.com/
 
 Widgets
 http://support.ptc.com/cs/help/thingworx_hc/thingworx_6.0_hc/index.jspx?id=thingworx09&action=show
  
-Rss
-http://apps.shareholder.com/rss/rss.aspx?channels=8626&companyid=PMTC&sh_auth=1327966735%2E0%2E0%2E42543%2Ee821bd4beb119dcffdb56e31a34f3e64
+![Rss](http://apps.shareholder.com/rss/rss.aspx?channels=8626&companyid=PMTC&sh_auth=1327966735%2E0%2E0%2E42543%2Ee821bd4beb119dcffdb56e31a34f3e64)
 
 https://precisionlms.ptc.com/viewer/guide/en/23464865/page/23593454#23593457
 
@@ -27,12 +28,11 @@ https://support.ptc.com/appserver/cs/portal/
 http://support.ptc.com/appserver/ptcu/class_eval_list.jsp?
 
 
-Day 02
-
-Aula 02 - Link Data in Marshup +Truck Challenge
+Aula 02 - Link Data in Marshup + Truck Challenge
 
 GetThinkWorxFeed  Code
 
+```javascript
 var params = {
 	proxyScheme: undefined /* STRING */,
 	headers: undefined /* JSON */,
@@ -68,28 +68,31 @@ for each(var item in xmlPage.channel.item){
     newEntry.title = item.title; // STRING
     result.AddRow(newEntry);
 }
+```
 
-
+```
 jdbc:mysql://127.0.0.1:3306/thingworxtrainingsample?allowMultiQueries=true
 SELECT * FROM SampleTable
+```
 
 
 Aula 03 - Alertas
 
 Mail Configuration
+```
 server: smtp.gmail.com
 port: 465
 pop3: pop.gmail.com/995
 useSSL: yes
 email: aftwtraining@gmail.com/ thingworx
-
 http://www.google.com/accounts/DisplayUnlockCaptcha
-
 
 Users[me.FieldServiceTech].smsAddress
 
+```
+
 ####################################################
-               
+```javascript
 //Set booleans and tags for high/low temperature/humidity
 var tag = {}; 
 if (me.CurrentHumidity < me.VMHumidityLowLimit) {
@@ -161,7 +164,6 @@ var result = Resources['InfoTableFunctions'].DeriveFields(params);
 
 ####################################################
 
-
 var salesPerProduct = me.SalesPerProduct();
 var params = {
     columns : "SalesPerProduct",
@@ -184,10 +186,11 @@ var result = Resources['InfoTableFunctions'].Query({
 ###############################################
 me.CurrentInventory = Inventory;
 ###############################################
-
+```
 
 Aula 04 -  Events & Subscription
 
+```javascript
 ####################################################
 
 var values = Things["VendingMachineIssueStream"].CreateValues(); 
@@ -260,12 +263,13 @@ if (me.VMHumidityHigh) {
         Things["VendingMachineIssueStream"].AddStreamEntry(params);    
     } 
 }
-
+```
 
 ####################################################
 
 Configuração AD:
 
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities build="33" majorVersion="5" minorVersion="0" revision="2" schemaVersion="773">
 	<DirectoryServices>
@@ -321,7 +325,6 @@ Configuração AD:
 		</DirectoryService>
 	</DirectoryServices>
 </Entities>
+```
 
-
-
-Aula 05 - Dashbord
+Aula 05 - Dashbords
