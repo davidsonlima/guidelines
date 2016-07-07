@@ -97,6 +97,25 @@ Used to model a set of similar objects. Can implement multiple Thing Shapes and 
 
 A specific instance of an object or system. Can implement one Thing Template and multiple Thing Shapes. From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2` 
 
+##### Data Shapes
+
+* Data Shapes are useful with **streams**, **data & info tables**, and **events** 
+* When a custom event is triggered, and fires an event it also provides the ability to pass along a data packet containing information about to the event. 
+  - Because of this, a custom event must be tied to a Data Shape that defines the data packet that is passed along. 
+* Built-in events (e.g. DataChange and Alert) also have an associated Data Shape, assigned automatically by the system 
+
+Field definitions must also be defined 
+Access Field Definitions by clicking ‘Field Definitions’ from the General Information page when creating a Data Shape 
+Also set Permissions (section) to define visibility, and other properties 
+
+A field definition may be a Primary Key that is only used and enforced in data tables… 
+In data tables, must set at least one field definition to be Primary or cannot use that Data Shape for the data table 
+Primary key also serves as an index 
+Events, streams, and info tables do not enforce uniqueness 
+
+
+
+
 
 #### Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
