@@ -5,10 +5,6 @@
 ```
 https://precisionlms.ptc.com
 classnumber = 00245506
-vm-password - stand1
-tomcat - admin/admin
-twx: Administrator/admin
-twx: ThingWorkStudent/ptc
 email: ferrario.adam@gmail.com
 ```
 #### Links úteis
