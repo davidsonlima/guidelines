@@ -3,7 +3,6 @@
 
 #### Informações Gerais
 ```
-wifi: r@d1Xc0rp16_02
 https://precisionlms.ptc.com
 classnumber = 00245506
 vm-password - stand1
