@@ -1,5 +1,6 @@
 # ThingWorx Certification Wiki  
 
+This wiki contains the major components identified to accomplish the certification exam. Its content is based on the [ThingWorx Documentantion](http://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/) and on the material of the **Introduction to ThingWorx 6.5** course.
 
 #### Define the following key concepts: (Exam Coverage 12%) 
 
@@ -52,6 +53,7 @@ Services can be viewed as methods of a class using the analogy with OO Programmi
     - Script Handler is a powerful way to use the server’s data, Things, and services for your application
     - Can perform calculations, lookups, and call/access properties or services from other Things and/or even access to external databases
 * Can be invoked through URL, REST client capable application, or by another Service within ThingWorx
+* Can have ONLY one output, but may have many inputs
 
 ##### Events
 
@@ -103,16 +105,14 @@ A specific instance of an object or system. Can implement one Thing Template and
 * When a custom event is triggered, and fires an event it also provides the ability to pass along a data packet containing information about to the event. 
   - Because of this, a custom event must be tied to a Data Shape that defines the data packet that is passed along. 
 * Built-in events (e.g. DataChange and Alert) also have an associated Data Shape, assigned automatically by the system 
+* Field definitions must also be defined 
+* A field definition may be a Primary Key that is only used and enforced in data tables… 
+  - In **data tables**, must set at least one field definition to be Primary or cannot use that Data Shape for the data table 
+  - Primary key also serves as an index 
+  - Events, streams, and info tables do not enforce uniqueness 
+* Also, Permissions (section) can be set to define visibility, and other properties 
 
-Field definitions must also be defined 
-Access Field Definitions by clicking ‘Field Definitions’ from the General Information page when creating a Data Shape 
-Also set Permissions (section) to define visibility, and other properties 
-
-A field definition may be a Primary Key that is only used and enforced in data tables… 
-In data tables, must set at least one field definition to be Primary or cannot use that Data Shape for the data table 
-Primary key also serves as an index 
-Events, streams, and info tables do not enforce uniqueness 
-
+#### Infotables
 
 
 
@@ -120,6 +120,13 @@ Events, streams, and info tables do not enforce uniqueness
 #### Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
 * ThingWorx extensions
+
+The ThingWorx platform offers a variety of tools and ways to access and consume external information sources 
+ThingWorx Edge MicroServer 
+Extensibility 
+Relational Databases
+
+
 
 ##### ThingWorx connectivity technologies
 
