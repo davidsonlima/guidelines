@@ -89,17 +89,39 @@ Subscription to a built-in Property (DataChange or Alert)
 
 ##### Thing Shape 
 
-Base definition component. Top of inheritance structure. Should have unique behaviours. From the perspective of OO programming, a Thing Shape can be seen as an `Abstract Class`. Example: `Vehicule` and `Refigerated Machine`
+Thing Shape is an abstract definition of a concrete thing or things. Defines properties, services, events, and subscriptions for things that implement the thing shape. Typically, the thing shape is implemented by a thing template, which is then the basis of actual things. 
 
+* Base definition component.
+* Top of inheritance structure.
+* Should have unique behaviours.
+* From the perspective of OO programming, a Thing Shape can be seen as an `Abstract Class`.
+   - Example: `Vehicule` and `Refigerated Machine`
+
+![ThingShapesModel](http://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/graphics/ThingShapesModel.JPG)
+  
 ##### Thing Template
 
-Used to model a set of similar objects. Can implement multiple Thing Shapes and one Thing Template. From the perspective of OO programming, a Thing Shape can be seen as a `Class`. Example: `Car`, `Truck`, `Normal Truck`, `Refrigerated Truck` and `Refigerated Machine`
+Thing Templates provide base functionality via properties, services, events, and subscriptions that thing instances utilize in their execution. ThingWorx things are derived from thing templates. 
+
+* They are used to model a set of similar objects.
+* Can implement multiple Thing Shapes and one Thing Template.
+* From the perspective of OO programming, a Thing Shape can be seen as a `Class`.
+   - Example: `Car`, `Truck`, `Normal Truck`, `Refrigerated Truck` and `Refigerated Machine`
+  
+![ThingTemplatesModel](http://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/graphics/ThingTemplatesModel.JPG)
 
 ##### Thing
 
-A specific instance of an object or system. Can implement one Thing Template and multiple Thing Shapes. From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2` 
+A thing is the modeled representation of physical assets and/or processes that have properties and business logic. All ThingWorx things are based on thing templates. 
+
+* A specific instance of an object or system. 
+* Can implement one Thing Template and multiple Thing Shapes. 
+* From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). 
+   - Example: `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2`. 
 
 ##### Data Shapes
+
+Data Shapes are multifaceted metadata-driven data structures. Data shapes are commonly used to define ThingWorx service outputs, data table, stream and value stream structures, and event payloads. They are comprised of field definitions, which are similar to columns in a database table or properties on an object.
 
 * Data Shapes are useful with **streams**, **data & info tables**, and **events** 
 * When a custom event is triggered, and fires an event it also provides the ability to pass along a data packet containing information about to the event. 
@@ -112,8 +134,16 @@ A specific instance of an object or system. Can implement one Thing Template and
   - Events, streams, and info tables do not enforce uniqueness 
 * Also, Permissions (section) can be set to define visibility, and other properties 
 
+
 #### Infotables
 
+
+
+
+
+#### Subsystems
+
+In ThingWorx, subsystems are system integration tools that provide Platform functionality that can be configured according to execution requirements. Subsystems handle event processing, file transfer, federated data storage, Web socket communications, stream processing, tunneling processing, and Platform configuration. With the proper permissions enabled, users can start, stop, and configure subsystems. The status of all subsystems is available in Composer in the Monitoring menu. Additional information on each subsystem is located in the Platform API documentation.
 
 
 
