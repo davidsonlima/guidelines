@@ -307,13 +307,13 @@ public class SimpleThing extends VirtualThing {
 * Transfer files between remote and platform repositories
 * Integrate file transfers into a mashup
 
-Work with ThingWorx extensions by doing the following: (Exam Coverage 4%)
+#### Work with ThingWorx extensions by doing the following: (Exam Coverage 4%)
 * Import ThingWorx extensions
 * Locate extensions on the ThingWorx marketplace
 * Use Templates from ThingWorx Model Extensions
 * Use Widgets from ThingWorx Extensions
 
-Use ThingWorx data structures, including the following: (Exam Coverage 14%)
+#### Use ThingWorx data structures, including the following: (Exam Coverage 14%)
 * Log values to value streams
 * Display value streams in a mashup
 * Create ThingWorx Streams
