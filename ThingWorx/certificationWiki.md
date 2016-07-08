@@ -209,13 +209,18 @@ An InfoTable is the aggregate base type within ThingWorx. InfoTables have a Data
 * ThingWorx connectivity technologies
 * ThingWorx extensions
 
-The ThingWorx platform offers a variety of tools and ways to access and consume external information sources 
-ThingWorx Edge MicroServer 
-Extensibility 
-Relational Databases
+The ThingWorx platform offers a variety of tools and ways to access and consume external information sources such as ThingWorx Edge MicroServer, Extensibility and Relational Databases.
 
 ##### ThingWorx connectivity technologies
 
+Information on the ThingWorx Edge/Connectivity products can be found in the Edge Help Center. This includes the following products:
+* Edge MicroServer (XMPP and WSEMS)
+* Connection Server
+* SDKs
+  - Java SDK
+  - .NET SDK
+  - iOS SDK
+  - C SDK
 
 ##### ThingWorx extensions
  
