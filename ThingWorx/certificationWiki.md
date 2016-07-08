@@ -134,18 +134,13 @@ Data Shapes are multifaceted metadata-driven data structures. Data shapes are co
   - Events, streams, and info tables do not enforce uniqueness 
 * Also, Permissions (section) can be set to define visibility, and other properties 
 
-
 #### Infotables
-
-
 
 
 
 #### Subsystems
 
 In ThingWorx, subsystems are system integration tools that provide Platform functionality that can be configured according to execution requirements. Subsystems handle event processing, file transfer, federated data storage, Web socket communications, stream processing, tunneling processing, and Platform configuration. With the proper permissions enabled, users can start, stop, and configure subsystems. The status of all subsystems is available in Composer in the Monitoring menu. Additional information on each subsystem is located in the Platform API documentation.
-
-
 
 #### Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
@@ -155,8 +150,6 @@ The ThingWorx platform offers a variety of tools and ways to access and consume 
 ThingWorx Edge MicroServer 
 Extensibility 
 Relational Databases
-
-
 
 ##### ThingWorx connectivity technologies
 
@@ -172,12 +165,12 @@ Relational Databases
 * Use predefined Things such as Timer Thing*
 *se Thing Templates to create Things (Exam Coverage: 3%)
 
-Work with ThingWorx entities and data by doing the following: (Exam Coverage 7%)
+#### Work with ThingWorx entities and data by doing the following: (Exam Coverage 7%)
 * Applying model tags to ThingWorx Entities
 * Exporting ThingWorx Entities and Data
 * Importing ThingWorx Entities
 
-Create Mashups by doing the following: (Exam Coverage 18%)
+#### Create Mashups by doing the following: (Exam Coverage 18%)
 * Configure Widgets
 * Determine when to use a Responsive versus Static mashup
 * Read the Connections panel of the mashup builder
@@ -193,7 +186,7 @@ Create Mashups by doing the following: (Exam Coverage 18%)
 * Test a mashup as the administrator
 * Test a mashup as the administrator
 
-Secure a ThingWorx application by doing the following: (Exam Coverage 13%)
+#### Secure a ThingWorx application by doing the following: (Exam Coverage 13%)
 * Create a ThingWorx group.
 * Define a ThingWorx organization and sub-units.
 * Apply security to an organization.
@@ -201,17 +194,17 @@ Secure a ThingWorx application by doing the following: (Exam Coverage 13%)
 * Set security for Entities
 * Set security for Services.
 
-Bind Edge devices to the platform by doing the following: (Exam Coverage 2%)
+#### Bind Edge devices to the platform by doing the following: (Exam Coverage 2%)
 * Identify when the platform has access to an unbound thing.
 * Bind a virtual thing to a remote thing.
 
-Add the following to things: (Exam Coverage 9%)
+#### Add the following to things: (Exam Coverage 9%)
 * Properties
 * Services
 * Events
 * Subscriptions
 
-Do the following with Services: (Exam Coverage 2%)
+#### Do the following with Services: (Exam Coverage 2%)
 * Create InfoTables in Services
 * Manipulate InfoTables in Services
 
