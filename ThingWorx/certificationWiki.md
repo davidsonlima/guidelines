@@ -119,6 +119,33 @@ A thing is the modeled representation of physical assets and/or processes that h
 * From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). 
    - Example: `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2`. 
 
+##### Mashups
+
+Mashups are web page visualizations that you use to deliver information from the ThingWorx model.
+The Mashup Builder is the tool you use to create your visualization web pages in ThingWorx, and is where individual Mashups are defined. A Mashup is a ThingWorx web page. The Mashup Builder is designed to be used by a content developer who has knowledge of the implemented ThingWorx model, and allows you to combine the data services available within ThingWorx with a set of visualization components, called Widgets, to create unique web pages that can combine data from multiple sources.
+
+You also define style and state definitions within the Mashup Builder. Styles and States are used to control the look and feel, such as colors, fonts, and color contexting, of individual Widgets in your Mashup.
+
+It is a 100% configuration, zero code content development environment. The basic concepts are as follows:
+* Widgets are the components that you place on a web page. They include things such as grids and charts for data rendering. Widgets also include basic HTML elements such as text boxes, buttons, and navigation links. Anything that is visible or clickable is a widget.
+
+* Data Services are added to the Mashup from the list of available services on the ThingWorx application server. You can then bind the results of a data service to a widget. Data Services can be called on Mashup page load and/or based on other service states and user interaction.
+
+* Widgets support Styles and States to different degrees, depending on the intended functionality of a Widget. For example, a text box will support a style for font size, font color, and background color, but not color context via States. A value display will support Style or State. Using a State Definition will allow you to affect the Style applied to the display depending on a data value (the value being displayed or another value returned in the same data service result).
+
+
+##### ThingWorx Organization
+
+Organizations in ThingWorx are hierarchical structures that allow the user to assign visibility to entities in the ThingWorx Model. Multiple organizations and organizational structures can be granted visibility to the same assets within a ThingWorx Model.
+Click here to view a tutorial video on organizations and visibility.
+If your organization wants to allow users to reset their passwords, you must select the Allow Password Reset checkbox. When you select it, the Password Reset Mail Server field is available for selection. For more information, see Password Reset.
+
+###### Example
+
+To illustrate the concept of organizations in ThingWorx, we will use a vending machine as an example of an asset. Beverage Company A leases a vending machine (named VM101 in ThingWorx) to Operating Company B. Operating Company B outsources the maintenance and inventory of the vending machine to Supplier C. Operating Company B also leases vending machines from Beverage Company D.
+Using this scenario, Company A, B, and C may require visibility to the VM101 vending machine, while Beverage Company D does not. After initial visibility is set, specific data elements and services can also be configured to be accessible only to the companies that require access. The “visibility test” is always applied before other security configuration rules are evaluated.
+
+
 ##### Data Shapes
 
 Data Shapes are multifaceted metadata-driven data structures. Data shapes are commonly used to define ThingWorx service outputs, data table, stream and value stream structures, and event payloads. They are comprised of field definitions, which are similar to columns in a database table or properties on an object.
@@ -134,13 +161,49 @@ Data Shapes are multifaceted metadata-driven data structures. Data shapes are co
   - Events, streams, and info tables do not enforce uniqueness 
 * Also, Permissions (section) can be set to define visibility, and other properties 
 
-#### Infotables
+##### Virtual Thing and Remote Thing
 
+The VirtualThing class represents a device, machine, or system in a client-side application. On the ThingWorx server side, a device, machine, or system is represented by a remote thing. The VirtualThing class is the foundation for providing properties, services, and events that are accessible from a ThingWorx user interface. Properties, services, and events can be defined using annotations. If the Virtual Thing instance that you create uses any annotations, it is important to call the initializeFromAnnotations() method in the 
+constructor of the VirtualThing class.
 
+##### Application Keys
 
-#### Subsystems
+Application keys are security tokens that can be used to log on to the ThingWorx application instead of using standard credentials. You can pass an application key in the URL of a request by adding the following query parameter:
+
+``appKey=1CB45438-0000-0000-B95C-892762FD0000``
+
+The request is run using the security context of the user associated with the application key. By default, a session is not created when a request is made using an application key. This is the recommended way for other systems and applications to make a request to the ThingWorx application. However, if you want to create a session, you can use the following query parameter in addition to passing in the application key: x-thingworx-session=true.
+
+When viewing a mashup via a URL and using an application key, you should create a session by adding x-thingworx-session=true. Without a session, subsequent requests require authentication using the standard HTTP basic authenticator. After the x-thingworx-session=true query parameter, you include #mashup=[your mashup name].
+
+##### Resources
+
+Resources are Platform services that are exposed as utilities to help in the development of ThingWorx based applications. Refer to the ThingWorx Platform API documentation for details on Resource-specific services:
+
+* AlertFunctions— services to access and manage alerts and alert metadata configuration.
+* CollectionFunctions — services to manage collection permissions.
+* ContentLoaderFunctions — services to load or post content to and from other web applications.
+* CurrentSessionInfo — services to retrieve information on the currently logged in user.
+* DashboardFunctions — services used to manage Dashboards.
+* DataManagementServices — access to the ThingWorx Neo4j database backup utility.
+* DeviceFunctions — services that provide the ability to search for Remote Things and their associated file repository.
+* EncryptionServices — services to encrypt/decrypt a string, such as a password, for storage.
+* EntityServices — services to create and delete ThingWorx Model Entities, such as Things, Users, Groups, and Networks.
+* FileSystemFunctions — services to transfer files to and from Remote Things.
+* InfoTableFunctions — services to create InfoTables and manipulate the data contained in the tables.
+* RuntimeLocalizationFunctions — services to access localization content.
+* ScriptServices — provides syntax checking for your script services.
+* SearchFunctions — services to search the ThingWorx model as well as content.
+* SourceControlFunctions — services to manage exportation of entities as files consumable for source control systems.
+* SubsystemMonitoring — reports on the status of the ThingWorx subsystems.
+
+##### Subsystems
 
 In ThingWorx, subsystems are system integration tools that provide Platform functionality that can be configured according to execution requirements. Subsystems handle event processing, file transfer, federated data storage, Web socket communications, stream processing, tunneling processing, and Platform configuration. With the proper permissions enabled, users can start, stop, and configure subsystems. The status of all subsystems is available in Composer in the Monitoring menu. Additional information on each subsystem is located in the Platform API documentation.
+
+##### Infotables
+
+An InfoTable is the aggregate base type within ThingWorx. InfoTables have a DataShapeDefinition that describes the names, base types, and additional information about each field within the table. Data within an InfoTable is contained in rows. Each row can have one or more fields, described by the table's DataShapeDefinition. ValueCollections are used to represent the rows within the table. InfoTables are often serialized to JSON and this class contains helper functions, such as toJSON and fromJSON to simplify that process.
 
 #### Identify the following: (Exam Coverage 5%)
 * ThingWorx connectivity technologies
@@ -162,8 +225,9 @@ Relational Databases
 #### Navigate the ThingWorx Composer User Interface (Exam Coverage 5%)
 
 #### Create Thing Templates (Exam Coverage 2%)	
-* Use predefined Things such as Timer Thing*
-*se Thing Templates to create Things (Exam Coverage: 3%)
+* Use predefined Things such as Timer Thing
+
+#### Use Thing Templates to create Things (Exam Coverage: 3%)
 
 #### Work with ThingWorx entities and data by doing the following: (Exam Coverage 7%)
 * Applying model tags to ThingWorx Entities
@@ -198,6 +262,27 @@ Relational Databases
 * Identify when the platform has access to an unbound thing.
 * Bind a virtual thing to a remote thing.
 
+##### Identify when the platform has access to an unbound thing
+
+There are two ways of doing so:
+
+1. Going to the ``Monitoring > Status > Remote Things`` section and check all Remote Things (with their status) and the unbond ones
+2. Going to the Thing you want to connect and manage the bindings and check if the remote thing appears on the list on the ``Remote`` tab.
+
+##### Bind a virtual thing to a remote thing.
+
+A remote thing on the ThingWorx Platform and a virtual thing on a remote asset are related to each other **by the name assigned to them**. A virtual thing collects and stores the values of its properties. It can then forward these values to its corresponding remote thing on the Platform.
+
+To use a virtual thing in an application extend the VirtualThing class. The following code would go in a new file, for example, SimpleThing.java:
+
+```java
+public class SimpleThing extends VirtualThing {
+  public SimpleThing(String name, String description, ConnectedThingClient client) {
+    super(name, description, client);
+  }
+}
+```
+
 #### Add the following to things: (Exam Coverage 9%)
 * Properties
 * Services
@@ -208,7 +293,7 @@ Relational Databases
 * Create InfoTables in Services
 * Manipulate InfoTables in Services
 
-Work with repositories by doing the following: (Exam Coverage 4%)
+#### Work with repositories by doing the following: (Exam Coverage 4%)
 * Define Platform File Repositories
 * Define Remote File Repositories
 * Transfer files from the client to a platform repository
