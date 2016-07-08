@@ -244,7 +244,6 @@ Based on these differences, streams remain most beneficial for non-thing driven 
 
 Value streams can also be used in a federation scenario, where the value stream data is written to another ThingWorx server. See the Federation section for more information.
 
-
 ##### Create ThingWorx Stream
 
 Streams represent time series data. Therefore, each stream has a timestamp and additional fields. A ThingWorx stream is a list of activities from things or data associated with things. A stream can be thought of as a table structure with five predefined fields and any number of user-defined fields. Every stream entry has the following included fields:
@@ -252,17 +251,18 @@ Streams represent time series data. Therefore, each stream has a timestamp and a
    The time the entry was created. It is also possible to provide a timestamp when adding a stream entry.
 ```
 Note  
-When filtering stream data from DSE streams, the end date is not inclusive. For example, if you query entries and set the end date to 
-the exact timestamp of the last entry, the last entry will not be included in your results.
+When filtering stream data from DSE streams, the end date is not inclusive.  
+For example, if you query entries and set the end date to the exact timestamp of the last entry,  
+the last entry will not be included in your results.
 ```
 * Tag
-   Each stream entry can have data tags. Data tags help to search for and consume specific runtime data.
+   - Each stream entry can have data tags. Data tags help to search for and consume specific runtime data.
 * Source
-   The source of the stream entry. This is usually the name of the thing writing to the stream or an identifier of an external system. There is an established relationship between a stream and its source. This is part of the built-in searchable relationships that are an artifact of the model.
+   - The source of the stream entry. This is usually the name of the thing writing to the stream or an identifier of an external system. There is an established relationship between a stream and its source. This is part of the built-in searchable relationships that are an artifact of the model.
 * SourceType
-   The entity type of the source
+   - The entity type of the source
 * Location
-   The location of the stream entry's source
+   - The location of the stream entry's source
 
 In addition to the included fields, additional fields can be configured. A ThingWorx DataShape defines the additional fields. These field values are referred to as stream values.
 
