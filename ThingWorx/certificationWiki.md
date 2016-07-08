@@ -236,3 +236,41 @@ Use ThingWorx data structures, including the following: (Exam Coverage 14%)
 * Create ThingWorx Data Tables
 * Tag data in streams and data tables
 * Identify persistence provider options
+
+##### Value Streams
+
+ThingWorx value streams provide time series information about a thing’s property values. 
+
+For users that are familiar with the functionality of streams, there are some noteworthy differences between streams and value streams in ThingWorx. The key difference is the way the data is written and returned.
+* Streams are independent data stores and can access data continuously. That is, querying a single column value returns the entire row.
+* Value streams store data from an associated thing’s property. That is, querying the thing’s property data returns the values for that property only. 
+
+This method of data storage in value streams contributes to the elimination of sparsely-populated data tables that can be evident with streams. This thing-centric access of its data in a value stream provides built-in support for multi-tenancy. In addition, scripts are not required to write thing property data to its value stream. 
+
+Based on these differences, streams remain most beneficial for non-thing driven models, while value streams are most useful for thing-driven models.
+
+Value streams can also be used in a federation scenario, where the value stream data is written to another ThingWorx server. See the Federation section for more information.
+
+
+##### Create ThingWorx Stream
+
+Streams represent time series data. Therefore, each stream has a timestamp and additional fields. A ThingWorx stream is a list of activities from things or data associated with things. A stream can be thought of as a table structure with five predefined fields and any number of user-defined fields. Every stream entry has the following included fields:
+* Timestamp
+   The time the entry was created. It is also possible to provide a timestamp when adding a stream entry.
+```
+Note  
+When filtering stream data from DSE streams, the end date is not inclusive. For example, if you query entries and set the end date to 
+the exact timestamp of the last entry, the last entry will not be included in your results.
+```
+* Tag
+   Each stream entry can have data tags. Data tags help to search for and consume specific runtime data.
+* Source
+   The source of the stream entry. This is usually the name of the thing writing to the stream or an identifier of an external system. There is an established relationship between a stream and its source. This is part of the built-in searchable relationships that are an artifact of the model.
+* SourceType
+   The entity type of the source
+* Location
+   The location of the stream entry's source
+
+In addition to the included fields, additional fields can be configured. A ThingWorx DataShape defines the additional fields. These field values are referred to as stream values.
+
+This also drives the StreamEntries, StreamData, and StreamEntriesWithData Services. In these Services, StreamEntries is the default fields, StreamData is the DataShape fields and StreamEntriesWithData is all the fields in the stream.
