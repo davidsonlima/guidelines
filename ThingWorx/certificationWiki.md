@@ -216,6 +216,7 @@ Relational Databases
 
 ##### ThingWorx connectivity technologies
 
+
 ##### ThingWorx extensions
  
   Located on the Market Place (http://marketplace.thingworx.com/).
