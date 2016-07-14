@@ -1,6 +1,6 @@
 ###Instalação###
 
-Utilizamos a versão 6.2.0
+Utilizamos a versão 6.2.1
 
 URL: xxxx
 
@@ -9,6 +9,15 @@ URL: xxxx
 ```
 tar xvzf ...
 ```
+
+####Configurando usuário admin####
+
+É preciso "descomentar" a última linha do arquivo <pasta do jboss>/etc/users:
+
+```
+admin=admin,admin,manager,viewer,Monitor, Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser
+```
+
 
 ####Iniciando o Jboss Fuse####
 
