@@ -8,7 +8,7 @@ $ ./runInstaller -ignoreSysPrereqs -silent -responseFile `pwd`/response/db_insta
 $ dbca -silent -createDatabase \
   -templateName General_Purpose.dbc \
   -gdbname RADIX -sid RADIX -responseFile NO_VALUE \
-  -characterSet AL32UTF8 \
+  -characterSet AL32UTF8 \ # or WE8MSWIN1252
   -sysPassword ******** \
   -systemPassword ******** \
   -databaseType MULTIPURPOSE \
