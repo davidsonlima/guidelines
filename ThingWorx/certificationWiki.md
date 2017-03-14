@@ -94,7 +94,7 @@ Thing Shape is an abstract definition of a concrete thing or things. Defines pro
 * Base definition component.
 * Top of inheritance structure.
 * Should have unique behaviours.
-* From the perspective of OO programming, a Thing Shape can be seen as an `Abstract Class`.
+* From the perspective of OO programming, a Thing Shape can be seen as an `Interface`.
    - Example: `Vehicule` and `Refigerated Machine`
 
 ![ThingShapesModel](http://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/graphics/ThingShapesModel.JPG)
@@ -116,7 +116,7 @@ A thing is the modeled representation of physical assets and/or processes that h
 
 * A specific instance of an object or system. 
 * Can implement one Thing Template and multiple Thing Shapes. 
-* From the perspective OO of programming, a Thing Shape can be seen as an `Object` (instance of a Class). 
+* From the perspective OO of programming, a Thing can be seen as an `Object` (instance of a Class). 
    - Example: `Car1`, `Car2`, `NT1`, `NT2`, `RT1`, `VM1`, `VM2`. 
 
 ##### Mashups
@@ -163,7 +163,7 @@ Data Shapes are multifaceted metadata-driven data structures. Data shapes are co
 
 ##### Virtual Thing and Remote Thing
 
-The VirtualThing class represents a device, machine, or system in a client-side application. On the ThingWorx server side, a device, machine, or system is represented by a remote thing. The VirtualThing class is the foundation for providing properties, services, and events that are accessible from a ThingWorx user interface. Properties, services, and events can be defined using annotations. If the Virtual Thing instance that you create uses any annotations, it is important to call the initializeFromAnnotations() method in the 
+The **_VirtualThing_ class represents a device, machine, or system in a client-side application**. On the ThingWorx **server side, a device, machine, or system is represented by a _remote thing_**. The VirtualThing class is the foundation for providing properties, services, and events that are accessible from a ThingWorx user interface. Properties, services, and events can be defined using annotations. If the Virtual Thing instance that you create uses any annotations, it is important to call the initializeFromAnnotations() method in the 
 constructor of the VirtualThing class.
 
 ##### Application Keys
@@ -253,7 +253,6 @@ Information on the ThingWorx Edge/Connectivity products can be found in the Edge
 * Use Data Entry widgets
 * Use List and Grid widgets
 * Use the visibility parameter in widgets
-* Test a mashup as the administrator
 * Test a mashup as the administrator
 
 #### Secure a ThingWorx application by doing the following: (Exam Coverage 13%)
